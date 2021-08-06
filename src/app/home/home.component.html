@@ -1,0 +1,39 @@
+<div class="home-container">
+  <div class="heading">
+    <h1>Home</h1>
+    <mat-icon size="large" class="icon">home</mat-icon>
+    <div>
+      <h6>Home - Dashboard</h6>
+    </div>
+  </div>
+  <div class="cards">
+    <app-card
+      class="card"
+      [icon]="'trending_up'"
+      [title]="'TOTAL SALES'"
+      [amount]="'123,456'"
+      [color]="'green'"
+    ></app-card>
+    <app-card
+      class="card"
+      [icon]="'trending_down'"
+      [title]="'NEW USERS'"
+      [amount]="'2,345'"
+      [color]="'red'"
+    ></app-card>
+    <app-card
+      class="card"
+      [icon]="'trending_up'"
+      [title]="'TODAY\'S SALES'"
+      [amount]="'924'"
+      [color]="'purple'"
+    ></app-card>
+    <app-card
+      class="card"
+      [icon]="'trending_up'"
+      [title]="'PROFIT'"
+      [amount]="'46.48%'"
+      [color]="'blueish'"
+    ></app-card>
+  </div>
+</div>

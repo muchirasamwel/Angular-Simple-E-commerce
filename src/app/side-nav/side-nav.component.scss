@@ -1,0 +1,40 @@
+
+$grey:#8898AA;
+$pinky:#7764E4;
+
+.side-nav{
+    width: 20vw;
+    padding: 10px;
+    .brand{
+        text-align: center;
+    }
+    .nav-links{
+        ul{
+            cursor: pointer;
+            list-style: none;
+            padding: 0 !important;
+            li{
+                color: grey;
+                border-radius: 5px;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    color: grey;
+                }
+                .icon{
+                    margin-right: 10px;
+                }
+            }
+            .active{
+                color: $pinky;
+                a{
+                    text-decoration: none;
+                    color: $pinky;
+                }
+                background-color:rgb(235, 235, 235);
+            }
+        }
+    }
+}

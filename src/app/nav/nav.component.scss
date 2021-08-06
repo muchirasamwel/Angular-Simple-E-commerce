@@ -1,0 +1,40 @@
+@mixin flex_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-nav{
+    @include flex_container;
+    padding: 25px;
+    .search{
+        @include flex_container;
+        padding: 15px;
+        background-color: white;
+        border-radius: 30px;
+        input{
+            border-width:0px;
+        }
+        .icon{
+            margin-right: 10px;
+        }
+    }
+    .nav-right{
+        @include flex_container;
+        .icon{
+            font-size: 30px;
+            color: white;
+           padding-right: 50px;
+        }
+        img{
+            border: 2px solid white;
+            background-color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .user{
+            color: white;
+        }
+    }
+}

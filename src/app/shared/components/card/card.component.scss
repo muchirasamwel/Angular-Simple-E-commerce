@@ -1,0 +1,70 @@
+@mixin flex_container {
+  display: flex;
+  align-items: center;
+}
+@mixin icon_style {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+$white: #ffff;
+$gray: #8898aa;
+$greenish: #18a61d;
+$red: #f53c56;
+$blueish: #11cdef;
+$purple: #7764e4;
+.card {
+  border-radius: 10px;
+  padding: 14px 18px;
+  background-color: $white;
+}
+.flex-container {
+  @include flex_container;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .card-title {
+    margin: 0px;
+    font-weight: normal;
+    color: $gray;
+    margin-bottom: 8px;
+  }
+  .card-amount {
+    font-size: 18px;
+  }
+}
+.icon {
+  color: $white;
+}
+.info {
+  font-size: 13px;
+}
+
+.icon-red {
+  @include icon_style;
+  background-color: $red;
+}
+
+.info-red {
+  color: $red;
+}
+
+.icon-purple {
+  @include icon_style;
+  background-color: $purple;
+}
+
+.icon-blueish {
+  @include icon_style;
+  background-color: $blueish;
+}
+
+.info-green {
+  color: $greenish;
+}
+.icon-green {
+  @include icon_style;
+  background-color: $greenish;
+}
