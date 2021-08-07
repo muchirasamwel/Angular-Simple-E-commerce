@@ -1,7 +1,7 @@
 <div class="home-container">
   <div class="heading">
     <h1>Home</h1>
-    <mat-icon size="large" class="icon">home</mat-icon>
+    <mat-icon class="icon">home</mat-icon>
     <div>
       <h6>Home - Dashboard</h6>
     </div>
@@ -23,14 +23,14 @@
     ></app-card>
     <app-card
       class="card"
-      [icon]="'trending_up'"
+      [icon]="'attach_money'"
       [title]="'TODAY\'S SALES'"
       [amount]="'924'"
       [color]="'purple'"
     ></app-card>
     <app-card
       class="card"
-      [icon]="'trending_up'"
+      [icon]="'bar_chart'"
       [title]="'PROFIT'"
       [amount]="'46.48%'"
       [color]="'blueish'"
@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="table-container">
-      <table>
+      <table border="1">
         <thead>
           <td>ID</td>
           <td>Product Name</td>
@@ -59,12 +59,13 @@
           <tr *ngFor="let prod of products">
             <td>{{ prod.id }}</td>
             <td>{{ prod.title.substring(0, 15) }}</td>
-            <td>{{ prod.category }}</td>
-            <td>{{ prod.pice }}</td>
+            <td>{{ prod.category[0].name }}</td>
+            <td>{{ prod.price }}</td>
             <td>
               <div>
-                <button>edit</button>
-                <button>Del</button>
+                <mat-icon class="icon icon-green">edit</mat-icon>
+
+                <mat-icon class="icon icon-red">delete</mat-icon>
               </div>
             </td>
           </tr>
@@ -73,3 +74,7 @@
     </div>
   </div>
 </div>
+<!-- 
+<div class="add-modal">
+  <input type="text" />
+</div> -->
