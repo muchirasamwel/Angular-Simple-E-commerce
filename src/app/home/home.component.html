@@ -36,4 +36,40 @@
       [color]="'blueish'"
     ></app-card>
   </div>
+
+  <div class="details-section">
+    <div class="flex-container">
+      <h1>Our Products</h1>
+      <div class="button-container">
+        <button class="btn btn-pri">New Category</button>
+        <button class="btn btn-pri">New Product</button>
+        <button class="btn btn-sec">Download</button>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <td>ID</td>
+          <td>Product Name</td>
+          <td>Product Category</td>
+          <td>Price</td>
+          <td>Actions</td>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prod of products">
+            <td>{{ prod.id }}</td>
+            <td>{{ prod.title.substring(0, 15) }}</td>
+            <td>{{ prod.category }}</td>
+            <td>{{ prod.pice }}</td>
+            <td>
+              <div>
+                <button>edit</button>
+                <button>Del</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -1,1 +1,57 @@
-<p>login works!</p>
+<div class="container">
+  <div class="flex-container flex-container-center">
+    <div class="login-card">
+      <form
+        [formGroup]="formData"
+        (ngSubmit)="onClickSubmit(formData.value)"
+        class="form-signin"
+      >
+        <h2 class="login-head">Ecommerce</h2>
+        <div class="flex-container flex-container-center">
+          <label class="login-label">
+            Welcome back! Please login to continue.
+          </label>
+        </div>
+
+        <div class="input-wrapper">
+          <mat-icon class="icon">email</mat-icon>
+          <input
+            type="text"
+            id="email"
+            formControlName="email"
+            placeholder="Email"
+            required
+            autofocus
+          />
+        </div>
+        <div class="input-wrapper">
+          <mat-icon class="icon">lock</mat-icon>
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control"
+            formControlName="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="flex-container login-more">
+          <div>
+            <input id="checkbox" type="checkbox" />
+            <label for="checkbox"> Remember me?</label>
+          </div>
+          <label>Forgot Password</label>
+        </div>
+        <div class="flex-container flex-container-center">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="flex-container flex-container-center new-login">
+    <label>New to Ecommerce?</label><a href="">Sign Up</a>
+  </div>
+</div>

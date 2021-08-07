@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+import { AuthService } from '../auth.service'
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  isUserLoggedIn = false
 
-  constructor() { }
+  constructor (private authService: AuthService, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit () {
+    let storeData = localStorage.getItem('isUserLoggedIn')
+
+    if (storeData != null && storeData == 'true') this.isUserLoggedIn = true
+    else this.isUserLoggedIn = false
   }
-
+  logout () {
+    this.authService.logout()
+    this.router.navigate(['/'])
+  }
 }
